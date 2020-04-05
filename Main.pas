@@ -226,9 +226,18 @@ begin
     finally
       ini.Free;
     end;
+    Edit1.Text := '';
   end;
-  if TreeView1.Selected.Text = TITLE_OID then PageControl1.ActivePage := TabSheet3;
-  if TreeView1.Selected.Text = TITLE_RA then PageControl1.ActivePage := TabSheet4;
+  if TreeView1.Selected.Text = TITLE_OID then
+  begin
+    PageControl1.ActivePage := TabSheet3;
+    Edit2.Text := '';
+  end;
+  if TreeView1.Selected.Text = TITLE_RA then
+  begin
+    PageControl1.ActivePage := TabSheet4;
+    Edit8.Text := '';
+  end;
 end;
 
 procedure TForm1.FormShow(Sender: TObject);
